@@ -49,12 +49,16 @@ namespace FormsApp1
                     }
 
                     lblMessage.Text = "Registration successful!";
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {
                     lblMessage.Text = "Error: " + ex.Message;
                 }
             }
+            
         }
 
         private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
